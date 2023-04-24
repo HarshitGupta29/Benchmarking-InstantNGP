@@ -32,6 +32,9 @@ The code-base has additional support for:
 ## ScanNet dataset support
 The repo now supports training a NeRF model on a scene from the ScanNet dataset. I personally found setting up the ScanNet dataset to be a bit tricky. Please find some instructions/notes in [ScanNet.md](ScanNet.md).
 
+To train a model, simply run the model with chair as presented earlier. It will create a folder in logs at the end which provide renders. To get graphs and PSNR numbers, refer to the scripts folder. To change the image to be trained on, simply switch the file name in the train script.
+
+To change interpolation type, go into hash_encoding.py and change the appropriate interpolation function.
 
 ## TODO:
 * Voxel pruning during training and/or inference
@@ -39,7 +42,7 @@ The repo now supports training a NeRF model on a scene from the ScanNet dataset.
 
 
 # Citation
-Kudos to [Thomas Müller](https://tom94.net/) and the NVIDIA team for this amazing work, that will greatly help accelerate Neural Graphics research:
+Kudos to [Thomas MÃ¼ller](https://tom94.net/) and the NVIDIA team for this amazing work, that will greatly help accelerate Neural Graphics research:
 ```
 @article{mueller2022instant,
     title = {Instant Neural Graphics Primitives with a Multiresolution Hash Encoding},
